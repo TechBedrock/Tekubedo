@@ -94,8 +94,7 @@
 使用 `/towny map` 在聊天栏查看ASCII 小地图. 
 或者使用 `/towny map hud` 把地图挂到计分板HUD, 边走边刷新, 推荐食用👍
 
-查看了地图后, 我们可以看到很多<font color="#00b050">+</font>
-
+![[-TownyMap.png]]
 TODO...
 
 ##### 🛑镇长每日自查清单
