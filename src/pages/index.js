@@ -20,7 +20,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link className="button button--primary button--lg" to={docsIntroUrl}>
-            开始使用
+            🏘️开始旅程
           </Link>
         </div>
       </div>

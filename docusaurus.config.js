@@ -90,7 +90,7 @@ const config = {
           {
             title: '文档',
             items: [
-              { label: '开始使用', to: '/docs/' }, // 若你已删除 intro，可改成你的第一篇文档路径
+              { label: '开始旅程', to: '/docs/' },
               { label: '站点地图', to: '/docs/' },
             ],
           },

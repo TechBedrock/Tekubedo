@@ -6,13 +6,13 @@
 
 ## 0. TL;DR \(急性子看这三行\)
 
-- **创建城镇：** 站在想当家门口的地块`/t new <NAME>`&`/t create <NAME>` →  点击提示或`/confirm` → 设置城镇的主地块 **(Homeblock)** `/t set homeblock` →  再往你的城镇氪点金毕`/t deposit <MONEY>` .
+- **创建城镇：** 站在想当家门口的地块`/t new &lt;NAME&gt;`&`/t create &lt;NAME&gt;` →  点击提示或`/confirm` → 设置城镇的主地块 **(Homeblock)** `/t set homeblock` →  再往你的城镇氪点金毕`/t deposit &lt;MONEY&gt;` .
 
     > 按 F3+G 看区块边界每一个区块就是你城镇的一个地块, 再使用 `/towny map hud` 打开mini格子地图食用更佳
 
-- **加入城镇：** `/t list` 找城 → `/t <城镇名>` 看简介查税率 *\(会是圈钱城吗\)*  →  `/t join <城镇名>` 申请之后城主同意就进城辣 \(→ 没公开就在聊天栏球球城镇居民让ta们拉你 → 收到邀请就**点击聊天框**或输入`/accept`加入叭\)
+- **加入城镇：** `/t list` 找城 → `/t &lt;城镇名&gt;` 看简介查税率 *\(会是圈钱城吗\)*  →  `/t join &lt;城镇名&gt;` 申请之后城主同意就进城辣 \(→ 没公开就在聊天栏球球城镇居民让ta们拉你 → 收到邀请就**点击聊天框**或输入`/accept`加入叭\)
 
-- **我是镇长! 如何管理好我的一方小天地：** 在地块里用 `/plot set <shop|farm|jail|...>` , 用 `/t set perm & /res set perm` 管理权限, 用 `/plot toggle <pvp|fire|explosion|mobs|taxed> <on|off>` 控制环境.
+- **我是镇长! 如何管理好我的一方小天地：** 在地块里用 `/plot set &lt;shop|farm|jail|...&gt;` , 用 `/t set perm & /res set perm` 管理权限, 用 `/plot toggle &lt;pvp|fire|explosion|mobs|taxed&gt; &lt;on|off&gt;` 控制环境.
 
     > 地块的含义以及指令的具体用法在下方有详细说明.
 
@@ -43,13 +43,13 @@
 
 #### 给你的城镇取一个响亮的名字
 
-使用 `/t create <城镇名>` 或 `/t new <城镇名>` 创建一个新的城镇, <城镇名> 可自行决定, 但请不要在名字中包含任何特殊字符, 避免出现错误. ~~(把这个用 Fxxk2213 当名字的人踢了)~~.
+使用 `/t create &lt;城镇名&gt;` 或 `/t new &lt;城镇名&gt;` 创建一个新的城镇, &lt;城镇名&gt; 可自行决定, 但请不要在名字中包含任何特殊字符, 避免出现错误. ~~(把这个用 Fxxk2213 当名字的人踢了)~~.
 
 您还可以使用 `/t claim` 认领一块新的地皮将这块地皮纳入您的城镇（地皮需要挨着主地块）
 
 #### 招募居民
 
-使用 `/t invite <玩家名>` 找一些志同道合的伙伴 ~~（或者是疯狂给你交税的富哥）~~
+使用 `/t invite &lt;玩家名&gt;` 找一些志同道合的伙伴 ~~（或者是疯狂给你交税的富哥）~~
 
 ### STEP2 宝典第二章 —— 固若金汤, 熊娃止步门外徨
 
@@ -65,13 +65,13 @@
  你不想让你的朋友在你的城镇上使用物品（比如烈焰蛋 打火石）~~毕竟你永远不知道你的朋友会干出什么破事~~, 那您可以
   `/t set perm friend itemuse off *关闭朋友的使用物品权限*`
 
-总之：`/t set perm <人|权限> <权限|(on/off)> <on/off>`
+总之：`/t set perm &lt;人|权限&gt; &lt;权限|(on/off)&gt; &lt;on/off&gt;`
 
 很好, 我相信聪明的你已经懂了权限系统了, 那接下来就~~来帮腐竹管 LP 吧(bushi~~.  
 
 ##### 不不, 下一步我们来管理土地叭
 
-基本指令  `/t toggle <Settings> <on/off>` , 您可以开关城镇火焰蔓延、开关城镇内的敌对怪物生成等操作. 
+基本指令  `/t toggle &lt;Settings&gt; &lt;on/off&gt;` , 您可以开关城镇火焰蔓延、开关城镇内的敌对怪物生成等操作. 
 
 照旧举个栗子:
   你的城镇是用来~~搞🟡的~~干坏事的, 你不想让别人知道, 你就可以使用
@@ -81,20 +81,20 @@
 
 |     父指令     |    子指令     |  开启/关闭   | 注解           |
 | :---------: | :--------: | :------: | ------------ |
-| `/t toggle` |  explsion  | <on/off> | 关城镇内的爆炸.     |
-| `/t toggle` |    fire    | <on/off> | 开关城镇内的火势蔓延.  |
-| `/t toggle` |    mobs    | <on/off> | 关城镇内的敌对怪物生成. |
-| `/t toggle` |   public   | <on/off> | 外人是否开启城镇传送点. |
-| `/t toggle` |    pvp     | <on/off> | 开关城镇内的PVP.   |
-| `/t toggle` | taxpercent | <on/off> | 开关按税率收税.     |
-| `/t toggle` |    open    | <on/off> | 放/关闭公开城镇.    |
+| `/t toggle` |  explsion  | &lt;on/off&gt; | 关城镇内的爆炸.     |
+| `/t toggle` |    fire    | &lt;on/off&gt; | 开关城镇内的火势蔓延.  |
+| `/t toggle` |    mobs    | &lt;on/off&gt; | 关城镇内的敌对怪物生成. |
+| `/t toggle` |   public   | &lt;on/off&gt; | 外人是否开启城镇传送点. |
+| `/t toggle` |    pvp     | &lt;on/off&gt; | 开关城镇内的PVP.   |
+| `/t toggle` | taxpercent | &lt;on/off&gt; | 开关按税率收税.     |
+| `/t toggle` |    open    | &lt;on/off&gt; | 放/关闭公开城镇.    |
 
 ##### 下一步, 我们来了解城镇的地块
 
 使用 `/towny map` 在聊天栏查看ASCII 小地图. 
 或者使用 `/towny map hud` 把地图挂到计分板HUD, 边走边刷新, 推荐食用👍
 
-![[-TownyMap.png]]
+![Towny Map](/img/towny/-TownyMap.png)
 TODO...
 
 ##### 🛑镇长每日自查清单
