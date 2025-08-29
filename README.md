@@ -1,41 +1,39 @@
-# Website
+# 🌐 Tekubedo Wiki
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+欢迎来到 **Tekubedo** —— TechBedrock 服务器的文档中心。  
+这里收录了服务器的玩法指南、功能说明以及相关资料，帮助新老玩家快速了解并参与到 TechBedrock 的世界中。
 
-## Installation
+---
 
-```bash
-yarn
-```
+## 📖 文档内容
+- 🏘 **Towny 指南**：从零开始建设与管理你的城镇  
+- …更多模块正在更新中！
 
-## Local Development
+你可以通过访问 GitHub Pages 在线浏览文档：
 
-```bash
-yarn start
-```
+👉 **[Tekubedo Wiki](https://techbedrock.github.io/Tekubedo/)**
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+---
 
-## Build
+## 🚀 快速开始
 
-```bash
-yarn build
-```
+1. 打开 Wiki 首页：[开始使用](https://techbedrock.github.io/Tekubedo/docs/)  
+2. 阅读对应的玩法指南  
+3. 在服务器中实践！
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+---
 
-## Deployment
+## 🛠 本地开发
 
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
+如果你想参与编写或修改 Wiki，可以在本地运行：
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+# 克隆仓库
+git clone https://github.com/TechBedrock/Tekubedo.git
+cd Tekubedo
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+# 安装依赖
+npm install
+
+# 启动本地开发服务器
+npm run start
