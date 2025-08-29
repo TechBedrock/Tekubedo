@@ -1,8 +1,7 @@
 ---
-id: index
 title: Towny 指南
 sidebar_label: 指南首页
-slug: /           # 保证它是 /docs/towny-guide/
+slug: /towny-guide
 ---
 
 欢迎来到 **Towny 指南** 📖  

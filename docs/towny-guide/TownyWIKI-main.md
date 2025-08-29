@@ -1,4 +1,11 @@
-# TechBedrock Towny 小贴士
+---
+id: basics
+title: Towny 详细玩法
+slug: /towny-guide/basics
+sidebar_label: 详细玩法
+---
+
+# TechBedrock Towny 详细玩法
 
 ## 0. TL;DR \(急性子看这三行\)
 
