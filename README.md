@@ -6,6 +6,7 @@
 ---
 
 ## 📖 文档内容
+
 - 🏘 **Towny 指南**：从零开始建设与管理你的城镇  
 - …更多模块正在更新中！
 
@@ -37,3 +38,10 @@ npm install
 
 # 启动本地开发服务器
 npm run start
+```
+
+打开浏览器访问 <http://localhost:3000>，即可预览。
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
