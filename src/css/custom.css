@@ -1,136 +1,190 @@
-/* ========== 共用变量 ========== */
+/* ===== Palette ===== */
 :root {
-  /* TB 渐变与金色点缀 */
-  --tb-blue-left: #4facfe;
-  --tb-blue-right: #00f2fe;
-  --tb-gold: #e7c888;
-
-  /* 代码/边框通用 */
-  --tb-border-light: #eef2f6;
-  --tb-border-dark:  #2a3444;
+  --tb-blue-1: #3a86ff;
+  --tb-blue-2: #00d4ff;
+  --tb-gold:   #e7c888;
+  --tb-border-light: #e9eef5;
+  --tb-border-dark:  #263244;
+  --radius-lg: 12px;
+  --shadow-sm: 0 6px 20px rgba(17,24,39,.06);
+  --shadow-dk: 0 4px 16px rgba(0,0,0,.5);
 }
 
-/* ========== 亮色（干净不刺眼） ========== */
+/* ===== Light mode ===== */
 :root {
-  --ifm-color-primary: #1e88e5;
-  --ifm-color-primary-dark: #1976d2;
-  --ifm-color-primary-darker: #1565c0;
-  --ifm-color-primary-light: #42a5f5;
-
-  --ifm-background-color: #ffffff;
+  --ifm-color-primary: var(--tb-blue-1);
+  --ifm-background-color: #f9fbfe;
   --ifm-background-surface-color: #ffffff;
-
   --ifm-navbar-background-color: #ffffff;
-  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
-
+  --ifm-footer-background-color: #0f172a;
   --ifm-toc-border-color: var(--tb-border-light);
   --ifm-table-border-color: var(--tb-border-light);
+  --ifm-code-background: #f4f7fb;
 }
-
-[data-theme='light'] .navbar {
-  box-shadow: 0 6px 24px rgba(17, 24, 39, 0.06);
-}
-
+[data-theme='light'] .navbar { box-shadow: var(--shadow-sm); }
 [data-theme='light'] .hero--primary {
-  background: linear-gradient(180deg, #f7fbff 0%, #ecf7ff 100%);
+  background: linear-gradient(180deg, #f4f9ff 0%, #eaf5ff 100%);
   color: #0b1220;
-  border-bottom: 1px solid #e6eef7;
 }
-
-/* 亮色按钮：主按钮用纯主色，保证可读性 */
-[data-theme='light'] .button.button--primary {
-  background: var(--ifm-color-primary);
-  color: #fff;
-  border: 0;
-}
-[data-theme='light'] .button.button--secondary {
-  color: #0b1220;
-  border-color: #cfd8e3;
-}
-
-/* 亮色卡片/代码块轻阴影 */
+[data-theme='light'] .button.button--primary { background: var(--tb-blue-1); color: #fff; }
 [data-theme='light'] .card,
-[data-theme='light'] .theme-doc-markdown pre {
-  box-shadow: 0 6px 20px rgba(17, 24, 39, 0.06);
-}
-
-/* 亮色公告栏 */
+[data-theme='light'] pre { box-shadow: var(--shadow-sm); border-radius: var(--radius-lg); }
 [data-theme='light'] .announcementBar {
-  background: #fffbe6;
-  color: #7a5a3a;
-  border-bottom: 1px solid #f4e7b5;
+  background: #fff8e7; color: #7a5a3a; border-bottom: 1px solid #f1e3b8;
 }
 
-/* ========== 暗色（TB 深蓝科技感） ========== */
+/* ===== Dark mode ===== */
 [data-theme='dark'] {
-  --ifm-background-color: #0b0f14;
-  --ifm-background-surface-color: #141b24;
-
-  /* 主色用右端青蓝，提高夜色对比 */
-  --ifm-color-primary: var(--tb-blue-right);
-
-  --ifm-navbar-background-color: #0d1117;
-  --ifm-footer-background-color: #0d1117;
-
-  --ifm-font-color-base: #e7eaf3;
-  --ifm-color-content-secondary: #8ea1c9;
-
+  --ifm-background-color: #0c1118;
+  --ifm-background-surface-color: #111827;
+  --ifm-navbar-background-color: #0d131c;
+  --ifm-footer-background-color: #0d131c;
+  --ifm-font-color-base: #f3f4f6;
+  --ifm-color-content-secondary: #cbd5e1;
+  --ifm-color-primary: var(--tb-blue-2);
   --ifm-table-border-color: var(--tb-border-dark);
   --ifm-toc-border-color: var(--tb-border-dark);
+  --ifm-code-background: #16202b;
 }
-
 [data-theme='dark'] .hero--primary {
-  background: linear-gradient(135deg, #0f1620 0%, #0b0f14 100%);
-  color: #e7eaf3;
+  background: linear-gradient(135deg, #0f1722 0%, #0b1119 100%);
+  color: #f3f4f6;
 }
-
-/* 夜色主按钮用渐变，次按钮用金色描边 */
 [data-theme='dark'] .button.button--primary {
-  background: linear-gradient(90deg, var(--tb-blue-left), var(--tb-blue-right));
-  border: none;
-  color: #0b0f14;
-  font-weight: 700;
+  background: linear-gradient(90deg, var(--tb-blue-1), var(--tb-blue-2));
+  color: #08121a; font-weight: 700;
 }
-[data-theme='dark'] .button.button--secondary {
-  border: 1px solid var(--tb-gold);
-  color: var(--tb-gold);
-}
-[data-theme='dark'] .button.button--secondary:hover {
-  background: var(--tb-gold);
-  color: #0b0f14;
-}
-
-/* 夜色卡片/代码块/边框 */
 [data-theme='dark'] .card {
-  background: #1a222e;
-  border: 1px solid var(--tb-border-dark);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  background: #121b26; border: 1px solid var(--tb-border-dark);
+  box-shadow: var(--shadow-dk); border-radius: var(--radius-lg);
 }
 [data-theme='dark'] pre {
-  background: #1c2733 !important;
-  border: 1px solid var(--tb-border-dark);
+  background: var(--ifm-code-background) !important;
+  border: 1px solid var(--tb-border-dark); border-radius: var(--radius-lg);
+}
+[data-theme='dark'] .announcementBar {
+  background: linear-gradient(135deg, #0f1722 0%, #0b1119 100%);
+  color: var(--tb-gold); border-bottom: 1px solid #233041;
 }
 
-/* 链接颜色（两模式分别定义 hover） */
+/* ===== Links & text ===== */
 a { transition: color .15s ease; }
 [data-theme='light'] a:hover { color: var(--ifm-color-primary); text-decoration: underline; }
-[data-theme='dark']  a { color: var(--tb-blue-left); }
-[data-theme='dark']  a:hover { color: var(--tb-blue-right); text-decoration: underline; }
+[data-theme='dark']  a { color: #93c5fd; }
+[data-theme='dark']  a:hover { color: var(--tb-blue-2); text-decoration: underline; }
+code {
+  background: var(--ifm-code-background);
+  border-radius: 6px; padding: .15rem .35rem;
+}
 
-/* 提示框统一 */
-.alert { border-radius: 10px; }
+/* ===== Sidebar & nav controls ===== */
+.theme-doc-sidebar-item-link--active:not(.menu__list-item--collapsed) > .menu__link {
+  font-weight: 600;
+}
+
+/* light */
+[data-theme='light'] .menu__link--active {
+  background: rgba(59,130,246,0.15);
+  color: var(--ifm-color-primary) !important;
+  border-radius: 6px;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+[data-theme='light'] .menu__link:hover {
+  background: rgba(59,130,246,0.1);
+  color: var(--tb-blue-1);
+}
+[data-theme='light'] .menu__caret { color: #4b5563; }
+[data-theme='light'] [class*="collapseSidebarButton"] { color: #475569; }
+
+/* dark */
+[data-theme='dark'] .menu__link { color: #cbd5e1; }
+[data-theme='dark'] .menu__link--active {
+  background: rgba(0,212,255,0.18);
+  color: #ffffff !important;
+  border-radius: 6px;
+  border-left: 4px solid var(--tb-blue-2);
+}
+[data-theme='dark'] .menu__link:hover {
+  background: rgba(0,212,255,0.12);
+  color: var(--tb-blue-2);
+}
+[data-theme='dark'] .menu__caret { color: #cbd5e1; }
+[data-theme='dark'] [class*="collapseSidebarButton"] { color: #cbd5e1; }
+
+/* shared */
+.menu__caret { color: inherit; }
+.menu__caret:hover { color: var(--ifm-color-primary); }
+[class*="collapseSidebarButton"],
+.theme-doc-sidebar-container [class*="collapseSidebarButton"] {
+  border: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+  border-radius: 8px;
+}
+[class*="collapseSidebarButton"]:hover { color: var(--ifm-color-primary); }
+
+/* theme toggle button */
+.navbar .clean-btn {
+  color: inherit; border: 1px solid transparent; border-radius: 8px;
+}
+.navbar .clean-btn:hover { color: var(--ifm-color-primary); }
+
+/* ===== Alerts & tables ===== */
+.alert { border-radius: 12px; }
 [data-theme='dark'] .alert {
-  background-color: #141b24;
-  border-left: 4px solid var(--tb-blue-right);
-  color: #e7eaf3;
+  background-color: #111a25; border-left: 4px solid var(--tb-blue-2); color: #f3f4f6;
+}
+table { border-radius: 10px; overflow: hidden; }
+thead tr { background: rgba(0,0,0,.02); }
+[data-theme='dark'] thead tr { background: rgba(255,255,255,.04); }
+
+/* ===== Focus & selection & scrollbar ===== */
+:focus-visible { outline: 2px solid var(--tb-blue-2); outline-offset: 2px; border-radius: 6px; }
+::selection { background: rgba(63,131,248,.25); }
+[data-theme='dark'] ::selection { background: rgba(0,212,255,.25); }
+
+/* Dark mode secondary button */
+[data-theme='dark'] .button.button--secondary {
+  background: rgba(255,255,255,0.06);
+  color: #f3f4f6;
+  border: 1px solid #374151;
+}
+[data-theme='dark'] .button.button--secondary:hover {
+  background: rgba(0,212,255,0.12);
+  border-color: var(--tb-blue-2);
+  color: #ffffff;
 }
 
-/* 公告栏（暗色） */
-[data-theme='dark'] .announcementBar {
-  background: linear-gradient(135deg, #0f1620 0%, #0b0f14 100%);
-  color: var(--tb-gold);
-  border-bottom: 1px solid var(--tb-border-dark);
+/* ===== Table of contents (right sidebar) ===== */
+/* Base color for TOC links in dark mode */
+[data-theme='dark'] .table-of-contents__link {
+  color: #cbd5e1;
+}
+/* Active TOC link in dark mode */
+[data-theme='dark'] .table-of-contents__link.toc-highlight {
+  background: rgba(0,212,255,0.18);
+  color: #ffffff;
+  border-left: 4px solid var(--tb-blue-2);
+  border-radius: 6px;
+  padding-left: 0.5rem;
+}
+/* Hover state for TOC links in dark mode */
+[data-theme='dark'] .table-of-contents__link:hover {
+  background: rgba(0,212,255,0.12);
+  color: var(--tb-blue-2);
+}
+/* Active and hover styling for TOC links in light mode */
+[data-theme='light'] .table-of-contents__link.toc-highlight {
+  background: rgba(59,130,246,0.15);
+  color: var(--ifm-color-primary);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 6px;
+  padding-left: 0.5rem;
+}
+[data-theme='light'] .table-of-contents__link:hover {
+  background: rgba(59,130,246,0.08);
+  color: var(--tb-blue-1);
 }
 
-/* 金色点缀工具类 */
+/* ===== Utilities ===== */
 .tb-accent { color: var(--tb-gold); }
