@@ -14,7 +14,7 @@ const config = {
   url: 'https://techbedrock.github.io',
   baseUrl: '/Tekubedo/',
   organizationName: 'TechBedrock',
-  projectName: 'Tekubedo', 
+  projectName: 'Tekubedo',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -71,8 +71,9 @@ const config = {
           },
           {
             href: 'https://github.com/TechBedrock/Tekubedo',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },

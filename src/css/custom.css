@@ -333,3 +333,40 @@ button:focus-visible,
 }
 :root ::-webkit-scrollbar-track { background: rgba(0,0,0,.06); }
 html[data-theme='dark'] ::-webkit-scrollbar-track { background: rgba(255,255,255,.06); }
+
+/* GitHub 链接按钮 */
+.header-github-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 点按区域 */
+  width: 45px;   
+  height: 45px;
+
+  color: inherit;
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+/* 图标本体 */
+.header-github-link::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: currentColor;
+
+  -webkit-mask: url('/img/github-mark.svg') no-repeat center / contain;
+  mask: url('/img/github-mark.svg') no-repeat center / contain;
+
+  transition: transform .12s ease, opacity .12s ease;
+}
+
+/* 悬停效果 */
+.header-github-link:hover::before {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+
