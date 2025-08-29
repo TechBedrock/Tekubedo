@@ -79,15 +79,15 @@
 
 其他的权限可自行查阅下面的表格, 就不详细说明辣 ~~(绝对不是南瓜懒~~
 
-|     父指令     |    子指令     |  开启/关闭   |     | 注解                       |
-| :---------: | :--------: | :------: | --- | ------------------------ |
-| `/t toggle` |  explsion  | <on/off> | -   | 关城镇内的爆炸.                 |
-| `/t toggle` |    fire    | <on/off> | -   | 开关城镇内的火势蔓延.              |
-| `/t toggle` |    mobs    | <on/off> | -   | 关城镇内的敌对怪物生成.             |
-| `/t toggle` |   public   | <on/off> | -   | 外人是否开启城镇传送点.             |
-| `/t toggle` |    pvp     | <on/off> | -   | 开关城镇内的PVP.               |
-| `/t toggle` | taxpercent | <on/off> | -   | 开关按税率收税.                 |
-| `/t toggle` |    open    | <on/off> | -   | 放/关闭公开城镇.                |
+|     父指令     |    子指令     |  开启/关闭   | 注解           |
+| :---------: | :--------: | :------: | ------------ |
+| `/t toggle` |  explsion  | <on/off> | 关城镇内的爆炸.     |
+| `/t toggle` |    fire    | <on/off> | 开关城镇内的火势蔓延.  |
+| `/t toggle` |    mobs    | <on/off> | 关城镇内的敌对怪物生成. |
+| `/t toggle` |   public   | <on/off> | 外人是否开启城镇传送点. |
+| `/t toggle` |    pvp     | <on/off> | 开关城镇内的PVP.   |
+| `/t toggle` | taxpercent | <on/off> | 开关按税率收税.     |
+| `/t toggle` |    open    | <on/off> | 放/关闭公开城镇.    |
 
 
 
