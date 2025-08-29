@@ -1,9 +1,5 @@
 # TechBedrock Towny 小贴士
 
-本维基意图用风趣幽默的语言为玩家们提供Towny相关的实用信息和技巧, 让大家能够身临其境地体验 Towny 带来的乐趣.
-
-话不多说, 让我们开始吧！
-
 ## 0. TL;DR \(急性子看这三行\)
 
 - **创建城镇：** 站在想当家门口的地块`/t new &lt;NAME&gt;`&`/t create &lt;NAME&gt;` →  点击提示或`/confirm` → 设置城镇的主地块 **(Homeblock)** `/t set homeblock` →  再往你的城镇氪点金毕`/t deposit &lt;MONEY&gt;` .
@@ -94,7 +90,7 @@
 使用 `/towny map` 在聊天栏查看ASCII 小地图. 
 或者使用 `/towny map hud` 把地图挂到计分板HUD, 边走边刷新, 推荐食用👍
 
-![Towny Map](/img/towny/-TownyMap.png)
+![Towny Map](/img/towny-guide/-TownyMap.png)
 TODO...
 
 ##### 🛑镇长每日自查清单
