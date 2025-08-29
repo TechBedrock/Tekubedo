@@ -1,0 +1,136 @@
+/* ========== 共用变量 ========== */
+:root {
+  /* TB 渐变与金色点缀 */
+  --tb-blue-left: #4facfe;
+  --tb-blue-right: #00f2fe;
+  --tb-gold: #e7c888;
+
+  /* 代码/边框通用 */
+  --tb-border-light: #eef2f6;
+  --tb-border-dark:  #2a3444;
+}
+
+/* ========== 亮色（干净不刺眼） ========== */
+:root {
+  --ifm-color-primary: #1e88e5;
+  --ifm-color-primary-dark: #1976d2;
+  --ifm-color-primary-darker: #1565c0;
+  --ifm-color-primary-light: #42a5f5;
+
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+
+  --ifm-toc-border-color: var(--tb-border-light);
+  --ifm-table-border-color: var(--tb-border-light);
+}
+
+[data-theme='light'] .navbar {
+  box-shadow: 0 6px 24px rgba(17, 24, 39, 0.06);
+}
+
+[data-theme='light'] .hero--primary {
+  background: linear-gradient(180deg, #f7fbff 0%, #ecf7ff 100%);
+  color: #0b1220;
+  border-bottom: 1px solid #e6eef7;
+}
+
+/* 亮色按钮：主按钮用纯主色，保证可读性 */
+[data-theme='light'] .button.button--primary {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border: 0;
+}
+[data-theme='light'] .button.button--secondary {
+  color: #0b1220;
+  border-color: #cfd8e3;
+}
+
+/* 亮色卡片/代码块轻阴影 */
+[data-theme='light'] .card,
+[data-theme='light'] .theme-doc-markdown pre {
+  box-shadow: 0 6px 20px rgba(17, 24, 39, 0.06);
+}
+
+/* 亮色公告栏 */
+[data-theme='light'] .announcementBar {
+  background: #fffbe6;
+  color: #7a5a3a;
+  border-bottom: 1px solid #f4e7b5;
+}
+
+/* ========== 暗色（TB 深蓝科技感） ========== */
+[data-theme='dark'] {
+  --ifm-background-color: #0b0f14;
+  --ifm-background-surface-color: #141b24;
+
+  /* 主色用右端青蓝，提高夜色对比 */
+  --ifm-color-primary: var(--tb-blue-right);
+
+  --ifm-navbar-background-color: #0d1117;
+  --ifm-footer-background-color: #0d1117;
+
+  --ifm-font-color-base: #e7eaf3;
+  --ifm-color-content-secondary: #8ea1c9;
+
+  --ifm-table-border-color: var(--tb-border-dark);
+  --ifm-toc-border-color: var(--tb-border-dark);
+}
+
+[data-theme='dark'] .hero--primary {
+  background: linear-gradient(135deg, #0f1620 0%, #0b0f14 100%);
+  color: #e7eaf3;
+}
+
+/* 夜色主按钮用渐变，次按钮用金色描边 */
+[data-theme='dark'] .button.button--primary {
+  background: linear-gradient(90deg, var(--tb-blue-left), var(--tb-blue-right));
+  border: none;
+  color: #0b0f14;
+  font-weight: 700;
+}
+[data-theme='dark'] .button.button--secondary {
+  border: 1px solid var(--tb-gold);
+  color: var(--tb-gold);
+}
+[data-theme='dark'] .button.button--secondary:hover {
+  background: var(--tb-gold);
+  color: #0b0f14;
+}
+
+/* 夜色卡片/代码块/边框 */
+[data-theme='dark'] .card {
+  background: #1a222e;
+  border: 1px solid var(--tb-border-dark);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+}
+[data-theme='dark'] pre {
+  background: #1c2733 !important;
+  border: 1px solid var(--tb-border-dark);
+}
+
+/* 链接颜色（两模式分别定义 hover） */
+a { transition: color .15s ease; }
+[data-theme='light'] a:hover { color: var(--ifm-color-primary); text-decoration: underline; }
+[data-theme='dark']  a { color: var(--tb-blue-left); }
+[data-theme='dark']  a:hover { color: var(--tb-blue-right); text-decoration: underline; }
+
+/* 提示框统一 */
+.alert { border-radius: 10px; }
+[data-theme='dark'] .alert {
+  background-color: #141b24;
+  border-left: 4px solid var(--tb-blue-right);
+  color: #e7eaf3;
+}
+
+/* 公告栏（暗色） */
+[data-theme='dark'] .announcementBar {
+  background: linear-gradient(135deg, #0f1620 0%, #0b0f14 100%);
+  color: var(--tb-gold);
+  border-bottom: 1px solid var(--tb-border-dark);
+}
+
+/* 金色点缀工具类 */
+.tb-accent { color: var(--tb-gold); }
