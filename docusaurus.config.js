@@ -97,7 +97,6 @@ const config = {
           {
             title: '社区',
             items: [
-              // 这些是占位链接：后续可替换为你们的实际渠道
               { label: 'QQ群', href: 'https://qm.qq.com/q/rUFqideS1c' },
               { label: '反馈/建议', href: 'https://github.com/TechBedrock/Tekubedo/issues' },
             ],
@@ -105,8 +104,7 @@ const config = {
           {
             title: '相关',
             items: [
-              { label: 'TechBedrock Github', href: 'https://github.com/TechBedrock' },
-              // {label: '开源许可', to: '/docs/license'}, // 如无此页可暂时移除
+              { label: 'TechBedrock Github', href: 'https://github.com/TechBedrock' }
             ],
           },
         ],
@@ -130,8 +128,8 @@ const config = {
       announcementBar: {
         id: 'tb_announce',
         content: '🎉 欢迎来到 <b>Tekubedo</b> Wiki！',
-        backgroundColor: '#fffbe6', // 亮色下的浅黄色背景
-        textColor: '#7a5a3a',       // 亮色下的棕色文字
+        backgroundColor: '#fffbe6',
+        textColor: '#7a5a3a',
         isCloseable: true,
       },
     }),
