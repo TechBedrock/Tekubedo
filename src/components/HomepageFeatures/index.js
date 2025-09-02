@@ -18,7 +18,7 @@ const FeatureList = [
   },
   {
     title: '游玩指南',
-    to: '/docs/towny-guide/',
+    to: '/docs/',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>

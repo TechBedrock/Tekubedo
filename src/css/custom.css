@@ -369,4 +369,16 @@ html[data-theme='dark'] ::-webkit-scrollbar-track { background: rgba(255,255,255
   transform: scale(1.15);
 }
 
+.hidden-anchor {
+  display: block !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+}
+
+.hidden-anchor .hash-link {
+  display: none !important;
+}
 

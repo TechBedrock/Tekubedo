@@ -1,13 +1,21 @@
 ---
 id: plot-management
 title: 地皮与权限管理（STEP2）
-slug: /towny-guide/plot-management
+slug: /towny-guide/mayor/plot-management
 sidebar_label: STEP2 地皮管理
 ---
 
-## STEP2 宝典第二章 —— 地皮管理 🔒 <a id="STEP2"></a>
+import Heading from '@theme/Heading';
 
-### 设置城镇权限 <a id="setPerm"></a>
+export const HiddenAnchor = ({ id }) => (
+  <Heading as="h4" id={id} aria-hidden="true" className="hidden-anchor">
+    {'\\u200B'}
+  </Heading>
+);
+
+## STEP2 宝典第二章 —— 地皮管理 🔒 {#STEP2}
+
+### 设置城镇权限 {#STEP2-setPerm}
 
 使用 `/t set perm` 开始微操，您可以设置居民 (resident) / 盟友 (ally) / 外人 (outsider) / 朋友 (friend) 在城镇地块上的 建造 (build) / 破坏 (destroy) / 使用开关 (switch) / 使用物品 (itemuse) 等权限
 
@@ -22,7 +30,7 @@ sidebar_label: STEP2 地皮管理
 
 ---
 
-### 管理城镇 <a id="STEP2-manageTown"></a>
+### 管理城镇 {#STEP2-manageTown}
 
 基本指令：
 
@@ -55,7 +63,7 @@ sidebar_label: STEP2 地皮管理
 
 ---
 
-### 查看城镇地图 <a id="STEP2-viewMap"></a>
+### 查看城镇地图 {#STEP2-viewMap}
 
 使用 `/towny map` 在聊天栏查看 ASCII 小地图。  
 或者使用 `/towny map hud` 把地图挂到计分板 HUD，边走边刷新，推荐食用 👍
@@ -64,7 +72,7 @@ sidebar_label: STEP2 地皮管理
 
 ---
 
-### 设置地皮类型(Plots Type) <a id="STEP2-PT"></a>
+### 设置地皮类型(Plots Type) {#STEP2-PT}
 
 上一节, 我们查看了您城镇的地图, 这节我们来了解下地皮类型(Plots Type).
 
@@ -74,13 +82,16 @@ sidebar_label: STEP2 地皮管理
 
 （下表父指令皆为 `/t set <TYPE>` *TYPE为下表子指令* ）
 
+<HiddenAnchor id="to_shop" />
+<HiddenAnchor id="emb" />
+
 | 子指令     | 注解                                                    |
 | ------- | ------------------------------------------------- |
-| shop    | <a id="to_shop"></a> 商铺区 (可额外设置 `/t set shopprice` & `/t set shoptax`)  |
+| shop    | 商铺区 (可额外设置 `/t set shopprice` & `/t set shoptax`)  |
 | farm    | 弄牧区, 只允许耕作/采摘/剪叶(TODO)                          |
 | inn     | 旅店, 外来人可用床设置重生点（敌对国家仍会被拒）              |
-| jain    | 监狱, 会把**通缉犯**关起来                                  |
+| jail    | 监狱, 会把**通缉犯**关起来                                  |
 | bank    | 银行，装饰/功能分区(服务器可用于RP)                          |
-| embassy | <a id="emb"></a>大使馆，**外镇玩家也能在你城内拥有地块**（适合“联合交流”）     |
+| embassy | 大使馆，**外镇玩家也能在你城内拥有地块**（适合“联合交流”）     |
 | arena   | 竞技场                                                     |
 | outpost | 前哨站                                                     |
