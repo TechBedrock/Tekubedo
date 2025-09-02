@@ -1,0 +1,14 @@
+---
+id: daily-checklist
+title: 镇长每日自查清单
+slug: /towny-guide/daily-checklist
+sidebar_label: 每日自查
+---
+
+## 🛑 镇长每日自查清单
+
+1. 🤔 银行有钱吗？（`/town` 查看)
+2. 🤔 税率合理吗？居民会不会明天就暴动？
+3. 🤔 地盘安全吗？PVP 关了吗？
+4. 🤔 有新地盘可以圈吗？
+5. 🍵 放松一下，你是个好镇长。

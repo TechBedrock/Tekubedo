@@ -1,0 +1,86 @@
+---
+id: plot-management
+title: 地皮与权限管理（STEP2）
+slug: /towny-guide/plot-management
+sidebar_label: STEP2 地皮管理
+---
+
+## STEP2 宝典第二章 —— 地皮管理 🔒 <a id="STEP2"></a>
+
+### 设置城镇权限 <a id="setPerm"></a>
+
+使用 `/t set perm` 开始微操，您可以设置居民 (resident) / 盟友 (ally) / 外人 (outsider) / 朋友 (friend) 在城镇地块上的 建造 (build) / 破坏 (destroy) / 使用开关 (switch) / 使用物品 (itemuse) 等权限
+
+  >举个栗子：  
+  >你不想让外人在你的城镇上做任何事，您可以：  
+  > `/t set perm outsider off   # 关闭外人的所有权限`
+  >再举个栗子：  
+  >你不想让你的朋友在你的城镇上使用一些危险物品（比如烈焰蛋、打火石）~~毕竟你永远不知道你的朋友会干出什么破事~~，那您可以：  
+  > `/t set perm friend itemuse off   # 关闭朋友的使用物品权限`
+  >总之:
+  >　`/t set perm <人|权限> <权限|(on/off)> <on/off>`
+
+---
+
+### 管理城镇 <a id="STEP2-manageTown"></a>
+
+基本指令：
+
+```mcfunction
+/t toggle <Settings> <on/off>
+```
+
+您可以开关城镇火焰蔓延、开关城镇内的敌对怪物生成等操作。
+
+举个栗子：  
+你的城镇是用来 ~~搞🟡的~~ 干坏事的，你不想让别人知道，你就可以使用：
+
+```mcfunction
+/t toggle open off   # 关闭城镇的访问查看权限
+```
+
+其他的权限可自行查阅下面的表格，就不详细说明啦 ~~（绝对不是南瓜懒）~~
+
+(下表中父指令皆为 `/t toggle` )
+
+| 子指令        | 开启/关闭      | 注解          |
+| ---------- | ---------- | ----------- |
+| explosion  | `<on/off>` | 关城镇内的爆炸     |
+| fire       | `<on/off>` | 开关城镇内的火势蔓延  |
+| mobs       | `<on/off>` | 关城镇内的敌对怪物生成 |
+| public     | `<on/off>` | 外人是否开启城镇传送点 |
+| pvp        | `<on/off>` | 开关城镇内的 PVP  |
+| taxpercent | `<on/off>` | 开关按税率收税     |
+| open       | `<on/off>` | 开启/关闭公开城镇   |
+
+---
+
+### 查看城镇地图 <a id="STEP2-viewMap"></a>
+
+使用 `/towny map` 在聊天栏查看 ASCII 小地图。  
+或者使用 `/towny map hud` 把地图挂到计分板 HUD，边走边刷新，推荐食用 👍
+
+  ![Towny Map](/img/towny-guide/TownyMap.png)
+
+---
+
+### 设置地皮类型(Plots Type) <a id="STEP2-PT"></a>
+
+上一节, 我们查看了您城镇的地图, 这节我们来了解下地皮类型(Plots Type).
+
+地皮类型说白了就是每块地皮可以被你标记为干什么的, 比如: 你规定A地皮是用来种田的, 那居民就只能种田了.
+
+很简单吧? 下表南瓜列举所有的地皮类型共各位冒险家参考awa:
+
+（下表父指令皆为 `/t set <TYPE>` *TYPE为下表子指令* ）
+
+| 子指令     | 注解                                                    |
+| ------- | ------------------------------------------------- |
+| shop    | <a id="to_shop"></a> 商铺区 (可额外设置 `/t set shopprice` & `/t set shoptax`)  |
+| farm    | 弄牧区, 只允许耕作/采摘/剪叶(TODO)                          |
+| inn     | 旅店, 外来人可用床设置重生点（敌对国家仍会被拒）              |
+| jain    | 监狱, 会把**通缉犯**关起来                                  |
+| bank    | 银行，装饰/功能分区(服务器可用于RP)                          |
+| embassy | <a id="emb"></a>大使馆，**外镇玩家也能在你城内拥有地块**（适合“联合交流”）     |
+| arena   | 竞技场                                                     |
+| outpost | 前哨站                                                     |
